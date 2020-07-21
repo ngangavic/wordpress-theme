@@ -1,17 +1,18 @@
 <?php get_header(); ?>
 
 <div class="container-fluid">
-    <div class="row">
+    <h5>
+        <?php the_title(); ?>
+    </h5>
 
-        <div class="col">
-            left
-        </div>
+    <?php
+    if(have_posts()):while(have_posts()):the_post();
+    ?>
 
-        <div class="col">
-            right
-        </div>
+    <?php the_content(); ?>
 
-    </div>
+    <?php endwhile; endif ?>
+
 </div>
 
 
